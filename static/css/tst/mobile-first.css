@@ -1,0 +1,151 @@
+@media screen and (max-width: 600px) {
+    main{
+        width: 94%;
+        border-radius: 1%;
+    }
+
+    section{
+        width:100%;
+    }
+    main, section{
+        margin: 0 auto;
+    text-align:center;
+    }
+
+    aside{
+        display: none;
+        width:40px;
+    }
+
+    section{
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+        .menuUsuario{
+        text-align: center;
+        color:white;
+        padding: 0;
+        margin:0;
+
+    }
+    .menuTopo{
+        text-align: center;
+    color:white;
+    padding: 0;
+    margin:0;
+
+    }
+
+
+	li a {
+
+    color: white;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 769px){
+    aside:first-child{
+        display: none;
+        width:40px;
+    }
+
+    aside:last-child{
+        display: flex;
+        width:40px;
+    }
+    
+    .menuUsuario{
+        text-align: center;
+        color:white;
+
+    }
+    .menuTopo{
+        text-align: center;
+    color:white;
+    }
+
+    main{
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+    
+    h1{
+        border-radius: 5px 5px 0px 0px;
+    }
+    main, h1{
+        margin-top: 5px;
+    }
+	li a {
+
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+
+}
+
+@media screen and (min-width: 769px){
+    body,html {
+        width:100%;
+    }
+    aside{
+        display: block;
+        text-align:center;
+        width:10%;
+        float:left;
+    }
+     main{
+    display: block;
+    text-align:center;
+    width:80%;
+    float:left;
+     }
+
+    .menuUsuario{
+        text-align: center;
+        color:white;
+
+    }
+    .menuTopo{
+        text-align: center;
+    color:white;
+
+    }
+footer{
+    width:10px;
+
+
+}
+footer span {
+text-align:center;
+}
+li a {
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+.botao{
+    text-align: center;
+}
+.logo{
+    width:15px;
+}
+}
+
+
+
+
+
