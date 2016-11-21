@@ -17,4 +17,5 @@
     </aside>
 </div>
 
+<?php require_once("Padrao/footer.php"); ?>
 <!--40,88-->

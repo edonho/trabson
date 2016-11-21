@@ -25,11 +25,11 @@
             
             <nav class="menuUsuario">
                 <ul>
-                    <li><a href="/site/html/inicio.php" title="home">Home</a></li>
-                    <li><a href="/site/html/cadastro.php" title="cadastre-se"> Cadastro </a></li>
-                    <li><a href="/site/html/login.php" title="entrar"> Login </a></li>
-                    <li> <a href="/site/html/perfil.php" title="perfil"> Perfil </a></li>
-                    <li> <a href="/site/html/mensagem.php" title="mensagem"> Mensagem </a> </li>
+                    <li><a href="/index.php/welcome/home" title="home">Home</a></li>
+                    <li><a href="/index.php/welcome/cadastro" title="cadastre-se"> Cadastro </a></li>
+                    <li><a href="/index.php/welcome/login" title="entrar"> Login </a></li>
+                    <li> <a href="/index.php/welcome/perfil" title="perfil"> Perfil </a></li>
+                    <li> <a href="/index.php/welcome/mensagem" title="mensagem"> Mensagem </a> </li>
                 </ul>    
             </nav> 
             
