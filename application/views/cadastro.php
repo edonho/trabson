@@ -1,4 +1,4 @@
-<style <?= "src='".base_url("static/css/cadastro.css")."'"; ?>></style>
+<style <?= "src='".base_url("static/css/cadastro.css")."'"; ?> ></style>
 <meta charset="UTF-8">
     <main class="inicio back-black-tp mains">
     <label class="form">

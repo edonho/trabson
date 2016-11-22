@@ -1,23 +1,10 @@
 <?php 
-            /*
-            $pos = $_GET["buscarEstudio"];
-                
-            require_once("Banco/conectar.php");
-            
-            $pesquisa = mysqli_query($con, "SELECT * FROM  `Estudio` WHERE  `nm_estudio` LIKE  '%".$pos."%' OR  `ds_estudio` LIKE  '%".$pos."%' OR `ds_img` LIKE  '".$pos."' LIMIT 0 , 30");
-            */
-            // Conectando o banco, se acaso nao conectar vai dar print no erro.
-    $con = mysqli_connect("localhost", "edinho", "", "tattoo") or print (mysql_error()); 
-    // seta o charset dos dados
-    $con->set_charset('utf8');
             foreach ($data->result() as $estudio){
                 $estudio = (array)$estudio;
             echo "<section id=\"estudio".$estudio["id_estudio"]."\">";
             echo "<img src=\"/".$estudio["ds_img"]."\" alt=imagem-\"".$estudio["nm_estudio"]."\" class=\"img-thumb\">";
             echo "<h2>".$estudio["nm_estudio"]."</h2>";
-                $avaliacao = mysqli_query($con, "SELECT ROUND(SUM(vl_avaliacao)/5) as avaliacao from Avaliacao where id_estudio =".$estudio["id_estudio"].";");
-                while($stars = mysqli_fetch_assoc($avaliacao)){
-                   $s = (int)$stars["avaliacao"]; 
+                   $s = (int)$estudio["avaliacao"]; 
                    switch ($s){
                         case 0:
                             echo "<span class=\"rating\" data-rating-id=\"".$estudio["id_estudio"]."\" data-rating-val=\"3".$estudio["id_estudio"]."\">";
@@ -83,13 +70,10 @@
                             echo "</span>";
                             break;
                    }
-            }
             echo"<p>".$estudio["ds_estudio"]."</p>";
             echo "</section><br>";
             echo "<div class=\"border\"></div>";
         };
-        // Fechando a conexao do banco
-        mysqli_close($con); 
         ?>
         
         <script <?= "src='".base_url("static/js/avaliar.js")."'"; ?> ></script>

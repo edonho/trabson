@@ -9,11 +9,13 @@ class Welcome extends CI_Controller {
 		$this->load->view('Padrao/footer');
 		
 	}
+	/*
 	public function home(){
 		$this->load->view('Padrao/header');
 		$this->load->view('inicio');
 		$this->load->view('Padrao/footer');
 	}
+	*/
 	public function cadastro(){
 		$this->load->view('Padrao/header');
 		$this->load->view('cadastro');
@@ -38,8 +40,9 @@ class Welcome extends CI_Controller {
 		$nome = $this->input->get("buscarEstudio");
 		$this->load->model("BancoModel","bdm");
 		$this->load->view('Padrao/header');
-		$data = $this->bdm->busca($nome);
-		$this->load->view('resultadoBusca',array("data"=>$data));
+		$resp = $this->bdm->busca($nome);
+		$dados = array("data"=>$resp);
+		$this->load->view('resultadoBusca',$dados);
 		$this->load->view('Padrao/footer');
 	}
 	
