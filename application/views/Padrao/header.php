@@ -19,7 +19,7 @@
             <div class="align-center padding">
                 <form class="formLogin" id="formLogin" action="/index.php/welcome/busca" method="GET">
                     <input type="text" name="buscarEstudio" id="buscarEstudio" class="buscarEstudio">
-                    <button type="button" name="search" value="" class="css3button">buscar</button>
+                    <input type="submit" name="search" value="buscar" class="css3button">
                 </form>
             </div>
             

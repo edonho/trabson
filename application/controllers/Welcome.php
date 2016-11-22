@@ -4,8 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Welcome extends CI_Controller {
 	
 	public function index(){
+		$this->load->model("BancoModel","bdm");
 		$this->load->view('Padrao/header');
-		$this->load->view('inicio');
+		$resp = $this->bdm->busca("e");
+		$dados = array("data"=>$resp);
+		$this->load->view('inicio',$dados);
 		$this->load->view('Padrao/footer');
 		
 	}

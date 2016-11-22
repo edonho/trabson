@@ -4,11 +4,8 @@
     </aside>
     
     <main class="inicio back-black-tp">
-        <h1> Início </h1>
-
-        <h2> Estúdios em destaque </h2>
+        <h1> Estúdios em destaque </h1>
         <?php require_once("Banco/listarEstudios.php"); ?>
-        
         <!--<script src="..estatico/js/awesomstar.min.js"></script>-->
     </main>
     
