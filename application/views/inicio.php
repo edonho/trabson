@@ -5,6 +5,7 @@
     
     <main class="inicio back-black-tp">
         <h1> Início </h1>
+
         <h2> Estúdios em destaque </h2>
         <?php require_once("Banco/listarEstudios.php"); ?>
         
@@ -12,10 +13,7 @@
     </main>
     
     <aside class="propaganda2 back-gray">
-        propaganda
-        propaganda
+<img <?= 'src="'.base_url("static/img/bannertattoo.png").'"';?> alt="propaganda tatuagem">
     </aside>
 </div>
-
-<?php require_once("Padrao/footer.php"); ?>
 <!--40,88-->

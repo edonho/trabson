@@ -1,9 +1,4 @@
-<?php require_once("Padrao/header.php"); ?>
-   <aside class="propaganda1 back-gray">
-        <img src="../estatico/img/bannertattoo.png" alt="propaganda tatuagem">
-    </aside>
-    
-    <main class="inicio back-black-tp">
+    <main class="inicio back-black-tp mains">
         <form class="formLogin" id="formLogin" action="../autenticar.php" method="post">
             <h1>Login</h1>
             <fieldset>
@@ -23,7 +18,4 @@
     </main>
     
     <aside class="propaganda2 back-gray">
-        propaganda
-        propaganda
     </aside>
-<?php require_once("Padrao/footer.php"); ?>

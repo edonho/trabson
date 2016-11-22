@@ -4,10 +4,15 @@
     Classes de width: .width-10, .width-20, .width-80, .width-full, 
     Classes Img: .img-thumb
 */
+header{
+    position: fixed;
+}
+
 body{
     margin: 0 auto;
     padding: 0;
     font-family: 'Century Gothic', sans-serif;
+    background-color:red;
 }
 
 body, header, .width-full, #content, footer{
@@ -54,6 +59,12 @@ form input{
 .back-black-tp{
     background-color: rgba(0, 0, 0, 0.7);
     color: #ecf0f1;
+    left: 5%;
+    right:5%;
+}
+
+.mains{
+    position: absolute;
 }
 
 .back-gray{

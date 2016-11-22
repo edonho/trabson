@@ -15,9 +15,9 @@
     </head>
     <body>
         <header class="back-black">
-            <a href="/site/html/inicio.php" title="home"><img id="logo" <?= 'src="'.base_url("static/img/logo.png").'"';?>></a>
+            <a href="/" title="home"><img id="logo" <?= 'src="'.base_url("static/img/logo.png").'"';?>></a>
             <div class="align-center padding">
-                <form class="formLogin" id="formLogin" action="resultadoBusca.php" method="get">
+                <form class="formLogin" id="formLogin" action="/index.php/welcome/busca" method="GET">
                     <input type="text" name="buscarEstudio" id="buscarEstudio" class="buscarEstudio">
                     <input type="submit" name="search" class="btBuscar back-white" value="Buscar">
                 </form>
@@ -25,7 +25,7 @@
             
             <nav class="menuUsuario">
                 <ul>
-                    <li><a href="/index.php/welcome/home" title="home">Home</a></li>
+                    <li><a href="/" title="home">Home</a></li>
                     <li><a href="/index.php/welcome/cadastro" title="cadastre-se"> Cadastro </a></li>
                     <li><a href="/index.php/welcome/login" title="entrar"> Login </a></li>
                     <li> <a href="/index.php/welcome/perfil" title="perfil"> Perfil </a></li>

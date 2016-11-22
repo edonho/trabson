@@ -145,7 +145,21 @@ li a {
 }
 }
 
+body{
+    background-image: url("../../img/tatu1.jpg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+   
+    
+}
 
 
+main {
+    margin-top: 105px;
+}
 
-
+aside{
+    margin-top: 105px;
+    
+}
