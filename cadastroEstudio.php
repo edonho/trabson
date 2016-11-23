@@ -7,28 +7,21 @@
             <fieldset>
                 <label>
                     <p>
-                   Nome
+                   Nome do Estúdio:
                    <br>
                    <input type="text" name="nome" placeholder="ex. João" maxlength="10" autofocus required/> 
                    </p>
                   </label>
                 <label>
                    <p>
-                   Sobrenome
                    <br>
                    <input type="text" name="sobrenome" placeholder="ex. Silva" required/>
                    </p>
                 </label>
+                
                 <label>
                     <p>
-                    Data de nascimento
-                    <br>
-                <input type="date" name="nascimento" placeholder="ex: 01/01/1996" required/>
-                    </p>
-                </label>
-                <label>
-                    <p>
-                    Email
+                    Email do Estúdio:
                    <br>
                 <input type="email" name="email" placeholder="ex. joao@gmail.com" required/> 
                     </p>
@@ -47,14 +40,13 @@
                 <input type="password" name="senha" required/>
                    </p>
                </label>
-              <label>
-                  <p>
-                Sexo
-                 <br>
-              <input type="radio" name="sexo" value="M"> Masculino 
-              <input type="radio" name="sexo" value="F"> Feminino 
-                  </p>
-              </label>
+                     <label>
+                     <p>
+                         Imagem do Estúdio:
+                         <input type="file" name="pic" accept="image/*">
+                          <input type="submit">
+                     </p> 
+                  </label>
            <input type="submit" name="search" value="Cadastrar" class="css3button">
           </fieldset>
         </form>

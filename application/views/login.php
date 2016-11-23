@@ -13,7 +13,7 @@
             </p>
             </label>
             </fieldset>
-            <input type="submit" value="entrar">
+            <input type="submit" name="search" value="entrar" class="css3button">
         </form>
     </main>
     

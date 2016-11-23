@@ -1,9 +1,13 @@
 <?php 
             foreach ($data->result() as $estudio){
                 $estudio = (array)$estudio;
-            echo "<section id=\"estudio".$estudio["id_estudio"]."\">";
-            echo "<img src=\"/".$estudio["ds_img"]."\" alt=imagem-\"".$estudio["nm_estudio"]."\" class=\"img-thumb\">";
-            echo "<h2>".$estudio["nm_estudio"]."</h2>";
+                ?>
+            <section <?= 'id="estudio'.$estudio["id_estudio"].'"'; ?> class="projeto">
+            <a href="/welcome/estudios">
+            <div <?= 'style=" background-image: url('.base_url($estudio["ds_img"]).');" alt="imagem-'.$estudio["nm_estudio"].'"'; ?> class="img1"></div>
+            <h2><?= $estudio["nm_estudio"];?></h2>
+            </a>    
+            <?php
                    $s = (int)$estudio["avaliacao"]; 
                    switch ($s){
                         case 0:
@@ -71,8 +75,7 @@
                             break;
                    }
             echo"<p>".$estudio["ds_estudio"]."</p>";
-            echo "</section><br>";
-            echo "<div class=\"border\"></div>";
+            echo "</section>";
         };
         ?>
         

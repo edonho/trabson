@@ -9,7 +9,15 @@ class BancoModel extends CI_Model{
         $result = $this->db->get();
         return $result;
     }
-}
+    public function estudios($id){
+        $this->db->select("e.*, ROUND( SUM( a.vl_avaliacao ) / COUNT( a.vl_avaliacao ) ) AS avaliacao");
+        $this->db->from("Estudio as e, Avaliacao as a");
+        $this->db->where("cd_estudio = " .  $id);
+        $r = $this->db->get();
+        return $r;
+    }
+    
+}  
 
 //TEMOS QUE PASSAR CADASTRO BJS
 ?>
