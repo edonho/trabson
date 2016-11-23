@@ -57,5 +57,20 @@ class Welcome extends CI_Controller {
 		$this->load->view("estudios",$resp[0]);
 		$this->load->view('Padrao/footer');
 	}
+	public function autenticar(){
+		$login= $this->input->post("login");
+		$senha= $this->input->post("senha");
+		$this->load->model('BancoModel','sted');
+		$resp = $this->sted->logar($login,$senha);
+		if($resp){
+			header('location: /');
+		}else {
+			header('location: /index.php/welcome/error');
+		}
+	}
+	
+	public function error(){
+		$this->load->view("error");
+	}
 	
 }

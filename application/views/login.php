@@ -1,5 +1,5 @@
     <main class="inicio back-black-tp mains">
-        <form class="formLogin" id="formLogin" action="../autenticar.php" method="post">
+        <form class="formLogin" id="formLogin" action="/index.php/welcome/autenticar" method="post">
             <h1>Login</h1>
             <fieldset>
                 <label>
