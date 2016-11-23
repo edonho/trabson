@@ -12,7 +12,7 @@ class BancoModel extends CI_Model{
     public function estudios($id){
         $this->db->select("e.*, ROUND( SUM( a.vl_avaliacao ) / COUNT( a.vl_avaliacao ) ) AS avaliacao");
         $this->db->from("Estudio as e, Avaliacao as a");
-        $this->db->where("cd_estudio = " .  $id);
+        $this->db->where("e.id_estudio = " .  $id);
         $r = $this->db->get();
         return $r;
     }

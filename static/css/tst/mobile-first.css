@@ -123,14 +123,7 @@
     color:white;
 
     }
-footer{
-    width:10px;
 
-
-}
-footer span {
-text-align:center;
-}
 li a {
     color: white;
     text-align: center;
@@ -193,3 +186,5 @@ aside{
 		0px -1px 0px rgba(000,000,000,0.7),
 		0px 1px 0px rgba(255,255,255,0.3);
 }
+
+

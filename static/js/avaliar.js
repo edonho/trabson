@@ -9,7 +9,6 @@
                     data: {id: id, avaliacao: avaliacao},
                     success: function(data) {
                         alert("Agradecemos sua avaliação!");
-                        window.location.reload();
                     },
                     error: function(request, status, error) {
                         alert("Erro: " + request.responseText);
