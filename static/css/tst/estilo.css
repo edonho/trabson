@@ -11,10 +11,6 @@ header{
 a{
     text-decoration:none;
 }
-.slider{
-    width:20px;
-}
-
 body{
     margin: 0 auto;
     padding: 0;
@@ -25,7 +21,6 @@ body{
 body, header, .width-full, #content, footer{
     width: 100%;
 }
-
 li{
     list-style-type: none;
     display: inline;

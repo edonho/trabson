@@ -1,15 +1,17 @@
 <?php 
-            foreach ($data->result() as $estudio){
-                $estudio = (array)$estudio;
-                ?>
-            <section <?= 'id="estudio'.$estudio["id_estudio"].'"'; ?> class="projeto">
+            $pos = $_GET["buscarEstudio"];
                 
-            <a href="/index.php/welcome/estudio?idEstudio=<?=$estudio['id_estudio']?>">
-            <div style=" background-image: url('<?=$estudio["ds_img"]?>');" alt="imagem-<?=$estudio["nm_estudio"]?>'" class="img1"></div>
-            <h2><?= $estudio["nm_estudio"];?></h2>
-            </a>
-            <?php
-                   $s = (int)$estudio["avaliacao"]; 
+            require_once("Banco/conectar.php");
+            
+            $pesquisa = mysqli_query($con, "SELECT * FROM  `Estudio` WHERE  `nm_estudio` LIKE  '%".$pos."%' OR  `ds_estudio` LIKE  '%".$pos."%' OR `ds_img` LIKE  '".$pos."' LIMIT 0 , 30");
+            
+            while($estudio = mysqli_fetch_assoc($pesquisa)){
+            echo "<section id=\"estudio".$estudio["id_estudio"]."\">";
+            echo "<img src=\"".$estudio["ds_img"]."\" alt=imagem-\"".$estudio["nm_estudio"]."\" class=\"img-thumb\">";
+            echo "<h2>".$estudio["nm_estudio"]."</h2>";
+                $avaliacao = mysqli_query($con, "SELECT ROUND(SUM(vl_avaliacao)/5) as avaliacao from Avaliacao where id_estudio =".$estudio["id_estudio"].";");
+                while($stars = mysqli_fetch_assoc($avaliacao)){
+                   $s = (int)$stars["avaliacao"]; 
                    switch ($s){
                         case 0:
                             echo "<span class=\"rating\" data-rating-id=\"".$estudio["id_estudio"]."\" data-rating-val=\"3".$estudio["id_estudio"]."\">";
@@ -75,9 +77,13 @@
                             echo "</span>";
                             break;
                    }
+            }
             echo"<p>".$estudio["ds_estudio"]."</p>";
-            echo "</section>";
+            echo "</section><br>";
+            echo "<div class=\"border\"></div>";
         };
+        // Fechando a conexao do banco
+        mysqli_close($con); 
         ?>
         
-        <script <?= "src='".base_url("static/js/avaliar.js")."'"; ?> ></script>
+        <script src="../estatico/js/avaliar.js"></script>

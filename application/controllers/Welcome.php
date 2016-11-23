@@ -50,11 +50,13 @@ class Welcome extends CI_Controller {
 	}
 	public function estudios(){
 		$this->load->view('Padrao/header');
+		
 		$this->load->model('BancoModel','est');//xablau
 		$r = $this->est->estudios($id);
-		$this->load->view('Padrao/footer');
+		$this->load->view("estudios");
 		
+		
+		$this->load->view('Padrao/footer');
 	}
-	
 	
 }
