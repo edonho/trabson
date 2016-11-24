@@ -84,10 +84,13 @@ class Welcome extends CI_Controller {
 	 		$this->load->model('BancoModel','cad');
 	 		$msg = $this->cad->cadastrar($data);
 	 		if($msg== "Cadastrado com sucesso!"){
-	 			header('location:/');
+	 			echo "<script> 
+						alert('".$msg."');
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/';
+					</script>";
 	 		}else{
 	 			echo "<script> 
-						alert('Falha no cadastro, tente novamente');
+						alert('".$msg."');
 						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/welcome/cadastro';
 					</script>";
 	 		}

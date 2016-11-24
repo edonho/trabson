@@ -127,6 +127,11 @@ form input{
     width: 100px;
 }
 
+.nascimento::-webkit-inner-spin-button,.nascimento::-webkit-calendar-picker-indicator{
+	display: none;
+	-webkit-appearance: none;
+}
+
 h1{ font-family:Arial;
     font-size: 1.250em;
     text-align:center;

@@ -2,7 +2,7 @@
 <div id="wrapper">
     <main class="inicio back-black-tp mains">
         <label class="form">
-            <form method="POST" action="../cad.php"> 
+            <form method="POST" action="/index.php/welcome/cadastrar"> 
         <h1>Cadastro</h1>
                 <fieldset>
                     <label>
@@ -23,7 +23,7 @@
                         <p>
                         Nascimento
                         <br>
-                    <input type="date" name="nascimento" placeholder="ex: 01/01/1996" required/>
+                    <input type="date" name="nascimento" placeholder="ex: 01/01/1996" class="nascimento" max="2000-12-31" required/>
                         </p>
                     </label>
                     <label>

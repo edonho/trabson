@@ -29,8 +29,12 @@ class BancoModel extends CI_Model{
             return false;
         }
     }
-    public function cadastrar(){
-        
+    public function cadastrar($data){
+        if ($this->db->insert('Usuario',$data)){
+            return "Cadastrado com sucesso!";
+        }else{
+            return "Falha no cadastro, tente novamente";
+        }
     }
 }  
 
