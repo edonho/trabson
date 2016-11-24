@@ -17,17 +17,20 @@ class BancoModel extends CI_Model{
         return $r;
     }
     public function logar($login,$senha){
-        $this->db->select("u.*")->from("Usuario as u")->where("nm_usuario",$login)->where("ds_senha ",$senha);
+        $this->db->select("u.*")->from("Usuario as u")->where("ds_login",$login)->where("ds_senha ",$senha);
         $resp = $this->db->get()->result();
         if(count($resp) == 1 ){
             $r = (array)$resp[0];
             $id = $r['id_usuario'];
-            $this->session->set_userdata("nome",$login);
+            $this->session->set_userdata("login",$login);
             $this->session->set_userdata("id",$id);
             return true;
         }else{
             return false;
         }
+    }
+    public function cadastrar(){
+        
     }
 }  
 

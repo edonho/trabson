@@ -80,4 +80,4 @@
         };
         ?>
         
-        <script <?= "src='".base_url("static/js/avaliar.js")."'"; ?> ></script>
+        <!--<script <?= "src='".base_url("static/js/avaliar.js")."'"; ?> ></script>-->

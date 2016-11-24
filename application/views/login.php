@@ -1,19 +1,24 @@
-    <main class="inicio back-black-tp mains">
+   <aside class="propaganda1 back-gray">
+       
+    </aside>
+    
+    <main class="inicio back-black-tp">
         <form class="formLogin" id="formLogin" action="/index.php/welcome/autenticar" method="post">
             <h1>Login</h1>
             <fieldset>
                 <label>
                     <p>
-            Nome: <input type="text" name="login" placeholder="Login" required autofocus>
+                    
+                  <input type="text" name="login" placeholder="Login"required autofocus>
                     </p>
             </label>
             <label>
                 <p>
-            Senha: <input type="password" name="senha" placeholder="Senha" required>
+                  <input type="password" name="senha" placeholder="Senha"required>
             </p>
             </label>
             </fieldset>
-            <input type="submit" name="search" value="entrar" class="css3button">
+             <input type="submit" name="search" value="Entrar" class="css3button">
         </form>
     </main>
     

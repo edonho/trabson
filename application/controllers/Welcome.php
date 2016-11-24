@@ -49,28 +49,52 @@ class Welcome extends CI_Controller {
 		$this->load->view('Padrao/footer');
 	}
 	public function estudios(){
-		$idEstudio = $this->input->get("idEstudio");
-		$this->load->model('BancoModel','est');//xablau
-		$this->load->view('Padrao/header');
-		$r = $this->est->estudios($idEstudio);
-		$resp = $r->result_array();
-		$this->load->view("estudios",$resp[0]);
-		$this->load->view('Padrao/footer');
-	}
-	public function autenticar(){
-		$login= $this->input->post("login");
-		$senha= $this->input->post("senha");
-		$this->load->model('BancoModel','sted');
-		$resp = $this->sted->logar($login,$senha);
-		if($resp){
-			header('location: /');
-		}else {
-			header('location: /index.php/welcome/error');
-		}
-	}
-	
-	public function error(){
-		$this->load->view("error");
-	}
-	
-}
+ 		$idEstudio = $this->input->get("idEstudio");
+  		$this->load->model('BancoModel','est');//xablau
+  		$this->load->view('Padrao/header');
+ 		$r = $this->est->estudios($idEstudio);
+ 		$resp = $r->result_array();
+ 		$this->load->view("estudios",$resp[0]);
+ 		
+  	}
+  		public function autenticar(){
+ 		$login= $this->input->post("login");
+ 		$senha= $this->input->post("senha");
+ 		$this->load->model('BancoModel','sted');
+ 		$resp = $this->sted->logar($login,$senha);
+ 		if($resp){
+ 			 echo "<script> 
+						alert('Login efetuado com sucesso!'); 
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/';
+					</script>";
+ 		}else {
+ 		     echo "<script> 
+						alert('Login ou senha invalida, Tente novamente!'); 
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/welcome/login';
+					</script>";
+ 			}
+  		}
+		public function cadastrar(){
+	 		$data['nm_usuario']= $this->input->post("nome"). " " .$this->input->post("sobrenome");
+	 		$data['dt_nascimento']= $this->input->post("nascimento");
+	 		$data['ds_email']= $this->input->post("email");
+	 		$data['ds_login']= $this->input->post("login");
+	 		$data['ds_senha']= $this->input->post("senha");
+	 		$data['sg_sexo'] = $this->input->post("sexo");
+	 		$this->load->model('BancoModel','cad');
+	 		$msg = $this->cad->cadastrar($data);
+	 		if($msg== "Cadastrado com sucesso!"){
+	 			header('location:/');
+	 		}else{
+	 			echo "<script> 
+						alert('Falha no cadastro, tente novamente');
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/welcome/cadastro';
+					</script>";
+	 		}
+ 		}
+ 	}
+ 	// public function error(){
+ 	// 	$this->load->view("error");
+ 	// }
+  	
+
