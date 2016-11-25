@@ -84,9 +84,28 @@ class Welcome extends CI_Controller {
 	 		$data['ds_login']= $this->input->post("login");
 	 		$data['ds_senha']= $this->input->post("senha");
 	 		$data['sg_sexo'] = $this->input->post("sexo");
-	 		$data['cd_cnpj'] = $this->input->post("cnpj");
 	 		$this->load->model('BancoModel','cad');
 	 		$msg = $this->cad->cadastrar($data);
+	 		if($msg== "Cadastrado com sucesso!"){
+	 			echo "<script> 
+						alert('".$msg."');
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/';
+					</script>";
+	 		}else{
+	 			echo "<script> 
+						alert('".$msg."');
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/welcome/cadastro';
+					</script>";
+	 		}
+ 		}
+ 			public function cadEstudio(){
+	 		$data['nm_usuario']= $this->input->post("nome");
+	 		$data['ds_email']= $this->input->post("email");
+	 		$data['ds_login']= $this->input->post("login");
+	 		$data['ds_senha']= $this->input->post("senha");
+	 		$data['cd_cnpj']= $this->input->post("cnpj");
+	 		$this->load->model('BancoModel','cad');
+	 		$msg = $this->cad->cadEstudio($data);
 	 		if($msg== "Cadastrado com sucesso!"){
 	 			echo "<script> 
 						alert('".$msg."');

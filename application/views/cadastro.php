@@ -3,7 +3,7 @@
 <div id="wrapper">
     <main class="inicio back-black-tp mains">
         <label id="usuarioForm" class="form">
-            <button id="btnTeste" onclick="formEstudio();">É gerente de um estúdio?Cadastre-se</button>
+            <button id="btnTeste" onclick="formEstudio();" class="css3button">Possui um Estúdio?Cadastre ele aqui!</button>
             <form method="POST" action="/index.php/welcome/cadastrar"> 
                 <h1>Cadastro de Usuário</h1>
                     <label>
@@ -24,7 +24,7 @@
                         <p>
                         Nascimento
                         <br>
-                    <input type="date" name="nascimento" placeholder="ex: 01/01/1996" class="nascimento" max="2000-12-31" required/>
+                    <input type="date" name="nascimento" placeholder="ex: 01/01/1996" class="nascimento" max="2000-12-31" />
                         </p>
                     </label>
                     <label>
@@ -60,7 +60,7 @@
         </label>
         
         <label id="estudioForm" class="form">
-           <button id="btnTeste" onclick="formUsuario();">Usuário comum?Cadastre-se</button>
+           <button id="btnTeste" onclick="formUsuario();" class="css3button">Usuário comum?Cadastre-se </button>
             <form method="POST" action="/index.php/welcome/cadastrar"> 
                 <h1>Cadastro de Estúdio</h1>                                                                                                                        <!-- XABLAU -->
                 <p>
@@ -89,6 +89,12 @@
                 <input type="password" name="senha" required/>
                    </p>
                </label>
+               <label>
+                   <p>
+                    Possui CNPJ?
+                 <br>  <input type="tel" name="cnpj" placeholder="xx.xxx.xxx/xxxx-xx" maxlength="14" autofocus /> 
+                   </p>
+                  </label>
                      <label>
                      <p>
                          Imagem do Estúdio:

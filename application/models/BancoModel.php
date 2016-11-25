@@ -36,6 +36,14 @@ class BancoModel extends CI_Model{
             return "Falha no cadastro, tente novamente";
         }
     }
+    
+        public function cadEstudio($data){
+            if ($this->db->insert('Estudio',$data)){
+                return "Estúdio cadastrado com sucesso!";
+            }else{
+                return "Falha no cadastro, tente novamente";
+            }
+        }
      public function mensagem($data){
          if ($this->db->insert('Mensagem',$data)){
              return "mensagem enviada com sucesso, obrigado!";
