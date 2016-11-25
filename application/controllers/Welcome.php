@@ -25,8 +25,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('Padrao/footer');
 	}
 	public function perfil(){
+		$id = $this->session->userdata("id");
 		$this->load->view('Padrao/header');
-		$this->load->view('perfil');
+		$this->load->model('BancoModel','dados');//xablau
+		$r = $this->dados->perfil($id);
+		$this->load->view('perfil',$r);
 		$this->load->view('Padrao/footer');
 	}
 	public function login(){
@@ -92,6 +95,26 @@ class Welcome extends CI_Controller {
 	 			echo "<script> 
 						alert('".$msg."');
 						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/welcome/cadastro';
+					</script>";
+	 		}
+ 		}
+ 		
+ 		public function feedback(){
+ 			$data['id_usuario'] = $this->input->post("nome");
+	 		$data['ds_email'] = $this->input->post("email");
+	 		$data['cd_telefone'] = $this->input->post("telefone");
+	 		$data['ds_mensagem'] = $this->input->post("mensagem");
+	 		$this->load->model('BancoModel','msg');
+	 		$mensagem = $this->msg->mensagem($data);
+	 		if($msg== "Mensagem enviada com sucesso!"){
+	 			echo "<script> 
+						alert('".$msg."');
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/';
+					</script>";
+	 		}else{
+	 			echo "<script> 
+						alert('".$msg."');
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/welcome/mensagem';
 					</script>";
 	 		}
  		}

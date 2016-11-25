@@ -1,10 +1,8 @@
    <aside class="propaganda1 back-gray">
-       
     </aside>
-    
     <main class="inicio back-black-tp">
         <form class="formLogin" id="formLogin" action="/index.php/welcome/autenticar" method="post">
-            <h1>Login</h1>
+            <h1><img <?= 'src="'.base_url("static/img/icons/login.png").'"';?> alt="propaganda tatuagem" class="icons"></h1>
             <fieldset>
                 <label>
                     <p>
@@ -21,6 +19,3 @@
              <input type="submit" name="search" value="Entrar" class="css3button">
         </form>
     </main>
-    
-    <aside class="propaganda2 back-gray">
-    </aside>

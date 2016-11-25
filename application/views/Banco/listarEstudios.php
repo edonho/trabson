@@ -1,7 +1,9 @@
 <?php 
+            $contar = 0;
             foreach ($data->result() as $estudio){
                 $estudio = (array)$estudio;
                 ?>
+            
             <section <?= 'id="estudio'.$estudio["id_estudio"].'"'; ?> class="projeto">
                 
             <a href="/index.php/welcome/estudios?idEstudio=<?=$estudio['id_estudio']?>">

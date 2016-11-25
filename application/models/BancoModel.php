@@ -36,7 +36,19 @@ class BancoModel extends CI_Model{
             return "Falha no cadastro, tente novamente";
         }
     }
-}  
-
-//TEMOS QUE PASSAR CADASTRO BJS
+     public function mensagem($data){
+         if ($this->db->insert('Mensagem',$data)){
+             return "mensagem enviada com sucesso, obrigado!";
+         }else{
+             return "Falha na mensagem, tente novamente";
+         }
+     }
+     public function perfil($id){
+         $this->db->select("ds_login,nm_usuario,dt_nascimento,ds_email,cd_telefone,sg_sexo");
+         $this->db->from("Usuario");
+         $this->db->where("id_usuario",$id);
+         $r = $this->db->get()->result_array();
+         return $r[0];
+     }
+}   
 ?>

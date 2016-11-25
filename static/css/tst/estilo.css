@@ -63,6 +63,7 @@ form input{
     color: #ecf0f1;
     left: 5%;
     right:5%;
+  
 }
 
 .mains{
@@ -92,23 +93,29 @@ form input{
 }
 
 /* --------------- Img --------------- */
+.listar3projetos{
+    width:100%;
+    text-align: center;
+}
 .img1{
     position: relative;
     width: 50%;
     height: 50%;
     margin-left:20%;
-  
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .projeto{
     top: 0px;
     display:inline-block;
     background-color: #000;
-    height:200px;
+    font-size: 0.8em;
+    height:276px;
     float: left;
     width: 22%;
-    padding:2%;
+    padding:10px;
     margin: 3%;
+    margin-left:6.15%;
     position:relative;
 }
 
@@ -123,6 +130,10 @@ form input{
 }
 
 /*--------------- Formulário--------------*/
+.mensagem{
+    width:400px;
+    height:100px;
+}
 .form{
     width: 100px;
 }
@@ -183,9 +194,20 @@ fieldset{
     bottom: 0px;
     text-align: center;
     padding-top: 15px;
-    s
+    position:relative;
+    bottom:0px;
 }
 #wrapper {
     display:table;
     padding:0 0 20px 0;
+}
+iframe{
+    margin-top:50px;
+    margin-left:10px;
+}
+.icons{
+     width:50px;
+}
+.icon1{
+     width:30px;
 }

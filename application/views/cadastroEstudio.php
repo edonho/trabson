@@ -13,13 +13,6 @@
                    </p>
                   </label>
                 <label>
-                   <p>
-                   <br>
-                   <input type="text" name="sobrenome" placeholder="ex. Silva" required/>
-                   </p>
-                </label>
-                
-                <label>
                     <p>
                     Email do Estúdio:
                    <br>
@@ -28,14 +21,14 @@
                </label>
                <label>
                    <p>
-                    Login
+                    Login:
                     <br>    
                 <input type="text" name="login" placeholder="ex. Joao123" required/>
                    </p>
                </label>
                <label>
                    <p>
-                    Senha
+                    Senha:
                     <br>
                 <input type="password" name="senha" required/>
                    </p>
