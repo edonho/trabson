@@ -84,6 +84,7 @@ class Welcome extends CI_Controller {
 	 		$data['ds_login']= $this->input->post("login");
 	 		$data['ds_senha']= $this->input->post("senha");
 	 		$data['sg_sexo'] = $this->input->post("sexo");
+	 		$data['cd_cnpj'] = $this->input->post("cnpj");
 	 		$this->load->model('BancoModel','cad');
 	 		$msg = $this->cad->cadastrar($data);
 	 		if($msg== "Cadastrado com sucesso!"){

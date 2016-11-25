@@ -17,13 +17,13 @@
                                 </label>
                                 <label>
                                         <p>Telefone<br>
-                                                <input type="number" name="telefone" required/> 
+                                                <input type="number" name="telefone" placeholder="Ex:(13)3341-7694"required/> 
                                         </p>
                                 </label>
                                 
                                    <label>
                                         <p>
-                                                Deixa uma Mensagem aqui beck mirror<br>
+                                               Entre em contato conosco !<br>
                                                 <input type="text" name="mensagem" maxlength="140" class="mensagem" required/> 
                                         </p>
                                 </label>
