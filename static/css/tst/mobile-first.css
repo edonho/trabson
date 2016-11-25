@@ -157,7 +157,7 @@ aside{
     
 }
 .css3button {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: verdana;
 	font-size: 14px;
 	color: #ffffff;
 	padding: 4px 8px;
@@ -186,5 +186,9 @@ aside{
 		0px -1px 0px rgba(000,000,000,0.7),
 		0px 1px 0px rgba(255,255,255,0.3);
 }
+.css3button:hover{
+    background-color: #ecf0f1;
+    color: #111;
+    transition:all .2s;
 
-
+}

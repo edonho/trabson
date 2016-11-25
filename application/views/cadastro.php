@@ -2,10 +2,13 @@
 <link rel="stylesheet" <?php echo ' href="'.base_url("static/css/cadestudio.css").'"'; ?> >
 <div id="wrapper">
     <main class="inicio back-black-tp mains">
-        <label id="usuarioForm" class="form">
-            <button id="btnTeste" onclick="formEstudio();" class="css3button">Possui um Estúdio?Cadastre ele aqui!</button>
-            <form method="POST" action="/index.php/welcome/cadastrar"> 
-                <h1>Cadastro de Usuário</h1>
+        <label class="form">
+            <label><input type="radio" name="escolheUsuario" id="formUsuario" class="css3button" checked>Usuário comum.</label>
+            
+            <label><input type="radio" name="escolheUsuario" id="formEstudio" class="css3button">Estúdio.</label>
+            
+            <form method="POST" action="/index.php/welcome/cadastrar" class="formularioUsuario"> 
+                    <h1>Cadastro de Usuário</h1>
                     <label>
                         <p>
                        Nome
@@ -57,12 +60,11 @@
                   </label>
                <input type="submit" name="search" value="Cadastrar" class="css3button">
            </form>
-        </label>
-        
-        <label id="estudioForm" class="form">
-           <button id="btnTeste" onclick="formUsuario();" class="css3button">Usuário comum?Cadastre-se </button>
-            <form method="POST" action="/index.php/welcome/cadestudio"> 
-                <h1>Cadastro de Estúdio</h1>                                                                                                                        <!-- XABLAU -->
+           
+           <!--FORMULARIO DO ESTUDIO-->
+           
+           <form method="POST" action="/index.php/welcome/cadestudio" class="formularioEstudio" style="display:none;"> 
+               <br> <h1>Cadastro de Estúdio</h1>                                                                                                                        <!-- XABLAU -->
                 <p>
                     Nome do estúdio
                  <br>  <input type="text" name="nome" placeholder="ex. Baixada Tattoo" maxlength="50" autofocus required/> 
@@ -105,6 +107,7 @@
                <input type="submit" name="search" value="Cadastrar" class="css3button">
         </form>
         </label>
+        
  </main>
  </div>
 
