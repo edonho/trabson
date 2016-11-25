@@ -61,11 +61,11 @@
         
         <label id="estudioForm" class="form">
            <button id="btnTeste" onclick="formUsuario();" class="css3button">Usuário comum?Cadastre-se </button>
-            <form method="POST" action="/index.php/welcome/cadastrar"> 
+            <form method="POST" action="/index.php/welcome/cadestudio"> 
                 <h1>Cadastro de Estúdio</h1>                                                                                                                        <!-- XABLAU -->
                 <p>
                     Nome do estúdio
-                 <br>  <input type="text" name="nome" placeholder="ex. João" maxlength="10" autofocus required/> 
+                 <br>  <input type="text" name="nome" placeholder="ex. Baixada Tattoo" maxlength="50" autofocus required/> 
                    </p>
                   </label>
                 <label>

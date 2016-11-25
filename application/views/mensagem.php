@@ -5,26 +5,26 @@
                         <fieldset>
                                  <label>
                                         <p>
-                                               Nome<br>
-                                                <input type="text" name="nome" required/> 
+                                               Nome:<br>
+                                                <input type="text" name="nome" placeholder="José Silva" required/> 
                                         </p>
                                 </label>
                                  <label>
                                         <p>
-                                                Email<br>
-                                                <input type="text" name="email" required/> 
+                                                Email:<br>
+                                                <input type="text" name="email" placeholder="exemplo@exemplo.com.br" required/> 
                                         </p>
                                 </label>
                                 <label>
-                                        <p>Telefone<br>
+                                        <p>Telefone:<br>
                                                 <input type="number" name="telefone" placeholder="Ex:(13)3341-7694"required/> 
                                         </p>
                                 </label>
                                 
                                    <label>
                                         <p>
-                                               Entre em contato conosco !<br>
-                                                <input type="text" name="mensagem" maxlength="140" class="mensagem" required/> 
+                                               Entre em contato conosco :<br>
+                                                <input type="text" name="mensagem" maxlength="140" class="mensagem" placeholder="Mensagem" required/> 
                                         </p>
                                 </label>
                                  <input type="submit" name="search" value="Enviar" class="css3button">

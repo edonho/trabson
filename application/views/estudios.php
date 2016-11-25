@@ -1,7 +1,7 @@
 <meta charset="UTF-8">
 <div id="wrapper">
     <main class="inicio back-black-tp mains">
-           <h1>PENSAR EM ALGO</h1>
+           <h1>Estúdio</h1>
             <section <?= 'id="estudio'.$id_estudio.'"'; ?> class="projeto">
                 <img <?= 'src="'.base_url($ds_img).'" alt="imagem-'.$nm_estudio.'"';?> class="img1">
                   <p><?=$ds_estudio?> </p>

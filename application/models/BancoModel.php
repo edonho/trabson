@@ -37,7 +37,7 @@ class BancoModel extends CI_Model{
         }
     }
     
-        public function cadEstudio($data){
+        public function cadestudio($data){
             if ($this->db->insert('Estudio',$data)){
                 return "Estúdio cadastrado com sucesso!";
             }else{
