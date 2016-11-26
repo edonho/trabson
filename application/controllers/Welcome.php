@@ -147,8 +147,8 @@ class Welcome extends CI_Controller {
 	 		$data['ds_email'] = $this->input->post("email");
 	 		$data['cd_telefone'] = $this->input->post("telefone");
 	 		$data['ds_mensagem'] = $this->input->post("mensagem");
-	 		$this->load->model('BancoModel','mg');
-	 		$msg = $this->mg->mensagem($data);
+	 		$this->load->model('BancoModel','mensag');
+	 		$msg = $this->mensag->mensagem($data);
 	 		if($msg== "Mensagem enviada com sucesso!"){
 	 			echo "<script> 
 						alert('".$msg."');

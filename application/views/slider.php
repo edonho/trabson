@@ -3,41 +3,54 @@
 
 <body>
 
-<div class="stage" style="height: auto;">
+
+	
+<div class="stage" style="height:500px;">
 	<div id="SLDR-ONE" class="sldr">
 		<ul class="wrp animate">
 			<li class="elmnt-one">
 				<div class="skew">
 					<div class="wrap">
-						<img src="../static/img/Lake.jpg" width="1000" height="563">
+						<img src="../static/img/Lake.jpg" width="1000" height="400px">
 					</div>
 				</div>
 			</li>
 			<li class="elmnt-two"><div class="skew">
 					<div class="wrap">
-						<img src="../static/img/Mountain-Range.jpg" width="1000" height="563">
+						<img src="../static/img/Mountain-Range.jpg" width="1000" height="400px">
 					</div>
 				</div>
 			</li>
 			<li class="elmnt-three">
 				<div class="skew">
 					<div class="wrap">
-						<img src="../static/img/Mt-Fuji.jpg" width="1000" height="563">
+						<img src="../static/img/Mt-Fuji.jpg" width="1000" height="400px">
 					</div>
 				</div>
 			</li>
 			<li class="elmnt-four">
 				<div class="skew">
 					<div class="wrap">
-						<img src="../static/img/Pink-Forest.jpg" width="1000" height="563">
+						<img src="../static/img/Pink-Forest.jpg" width="1000" height="400px">
 					</div>
 				</div>
 			</li>
 		</ul>
 	</div>
-
-	
 </div>
+<div class="captions" style="margin-top:15px;">
+	 <div class="focalPoint"><p><small>Lake</small></p></div>
+	 <div><p><small>Mountain Range</small></p></div>
+	 <div><p><small>Mt. Fuji</small></p></div>
+	 <div><p><small>Pink Forest</small></p></div>
+	</div>
+
+	<ul class="selectors">
+		<li class="focalPoint"><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li>
+	</ul>
+
+	<button class="sldr-prv sldr-nav prev">Prev</button>
+	<button class="sldr-nxt sldr-nav next">Next</button>
 
 <script src="../static/js/jquery-1.10.2.min.js"></script>
 <script src="../static/js/jquery.sldr.js"></script>
