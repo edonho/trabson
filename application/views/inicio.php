@@ -5,6 +5,7 @@
     </aside>
     
     <main class="inicio back-black-tp">
+        <?php include("slider.php"); ?>
         <h1> Estúdios em destaque </h1>
         <?php require_once("Banco/listarEstudios.php"); ?>
         <!--<script src="..estatico/js/awesomstar.min.js"></script>-->

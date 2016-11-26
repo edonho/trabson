@@ -8,7 +8,6 @@ class Welcome extends CI_Controller {
 		$this->load->view('Padrao/header');
 		$resp = $this->bdm->busca("e");
 		$dados = array("data"=>$resp);
-		$this->load->view('bootstrap-carousel');
 		$this->load->view('inicio',$dados);
 		$this->load->view('Padrao/footer');
 		
@@ -143,13 +142,13 @@ class Welcome extends CI_Controller {
 					</script>";
 	 		}
  		}
- 		public function mensages(){
+ 		public function mensagen(){
  			$data['nm_usuario'] = $this->input->post("nome");
 	 		$data['ds_email'] = $this->input->post("email");
 	 		$data['cd_telefone'] = $this->input->post("telefone");
 	 		$data['ds_mensagem'] = $this->input->post("mensagem");
-	 		$this->load->model('BancoModel','msg');
-	 		$mensagem = $this->msg->mensagem($data);
+	 		$this->load->model('BancoModel','mg');
+	 		$msg = $this->mg->mensagem($data);
 	 		if($msg== "Mensagem enviada com sucesso!"){
 	 			echo "<script> 
 						alert('".$msg."');

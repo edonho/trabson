@@ -5,8 +5,9 @@
         <form method="POST" action="../cad.php"> 
     <h1>Cadastro</h1>
             <fieldset>
+                <div class="cadastro">
                 <label>
-                    <p>
+                 <p>
                    Nome do Estúdio:
                    <br>
                    <input type="text" name="nome" placeholder="ex. João" maxlength="10" autofocus required/> 
@@ -40,6 +41,7 @@
                      </p> 
                   </label>
            <input type="submit" name="search" value="Cadastrar" class="css3button">
+             </div>
           </fieldset>
         </form>
     </label>

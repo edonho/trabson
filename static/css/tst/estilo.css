@@ -132,44 +132,35 @@ form input{
 
 /*--------------- Formulário--------------*/
 .mensagem{
-    width:300px;
-    height:100px;
-    background-color:#444;
-    color:white;
-    background-color:#fff;
+    width:185px;
+    height:120px;
+    margin-left:10px;
 }
+/*--------------DIVS------------------*/
 .formstyle{
     background-color:#000;
     width:400px;
-    margin-left:570px;
+    margin:auto;
     border-radius: 25px;
 }
 .login{
     background-color:#000;
     width:400px;
-    margin-left:560px;
+    margin:auto;
     border-radius: 25px;
     height:160px;
 }
+.cadastro{
+    background-color:#000;
+    width:400px;
+    margin:auto;
+    border-radius: 25px;
+    height:450px;
+}
+
 /*---------------Icons-------------------*/
-.log{
-    background-position:left;
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-color:#fff;
-}
-.key{
-    background-position:left;
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-color:#fff;
-   
-}
-.telefone{
-    background-position:left;
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-color:#fff;
+.name,.mail,.tel{
+    width:15px;
 }
 .form{
     width: 100px;

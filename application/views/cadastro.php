@@ -5,10 +5,10 @@
             <label><input type="radio" name="escolheUsuario" id="formUsuario" class="css3button" checked>Usuário comum</label>
             
             <label><input type="radio" name="escolheUsuario" id="formEstudio" class="css3button">Estúdio</label>
-            
             <form method="POST" action="/index.php/welcome/cadastrar" class="formularioUsuario"> 
                     <h1>Cadastro de Usuário</h1>
-                    <label>
+                    <div class="cadastro">
+                       <label>
                         <p>
                        Nome
                        <br>
@@ -58,6 +58,7 @@
                       </p>
                   </label>
                <input type="submit" name="search" value="Cadastrar" class="css3button">
+               </div>
            </form>
            
            <!--FORMULARIO DO ESTUDIO-->
