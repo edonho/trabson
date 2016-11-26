@@ -161,6 +161,12 @@ class Welcome extends CI_Controller {
 					</script>";
 	 		}
  		}
+ 		public function pulverizar(){
+ 			$this->session->unset_userdata("id");
+ 			echo "<script> 
+					window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/';
+				</script>";
+ 		} 
  	}
  	// public function error(){
  	// 	$this->load->view("error");

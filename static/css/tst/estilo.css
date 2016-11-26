@@ -157,11 +157,27 @@ form input{
     border-radius: 25px;
     height:450px;
 }
+.dadosperfil{
+    background-color:#000;
+    width:400px;
+    margin:auto;
+    border-radius: 25px;
+    height:250px;
+}
 
 /*---------------Icons-------------------*/
 .name,.mail,.tel{
     width:15px;
 }
+.tel1{
+    margin-right:50px;
+    width:25px;
+}
+.end{
+    margin-right:10px;
+    width:25px;
+}
+
 .form{
     width: 100px;
 }

@@ -4,7 +4,8 @@
           <h1><img <?= 'src="'.base_url("static/img/icons/perfil.png").'"';?> alt="propaganda tatuagem" class="icons"></h1>
           <div class="dadosperfil">
                 <p>
-                        Login: <?php echo $ds_login ?>
+                <img <?= 'src="'.base_url("static/img/icons/lock.png").'"';?> class="name">
+                     <?php echo $ds_login ?>
                 </p>
                 <p>
                         Nome: <?php echo $nm_usuario ?>
@@ -23,7 +24,7 @@
                 <p>
                         Sexo: <?php echo $sg_sexo ?>
                 </p>
-                
+                  <a href="/index.php/welcome/pulverizar" name="Logout" class="css3button">Logout </a>
           </div>
      </main>
 </div>

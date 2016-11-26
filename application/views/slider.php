@@ -3,7 +3,7 @@
 
 <body>
 
-<div class="stage">
+<div class="stage" style="height:550px;">
 	<div id="SLDR-ONE" class="sldr">
 		<ul class="wrp animate">
 			<li class="elmnt-one">
@@ -35,6 +35,19 @@
 			</li>
 		</ul>
 	</div>
+	<div class="captions">
+	 <div class="focalPoint"><p><small>Lake</small></p></div>
+	 <div><p><small>Mountain Range</small></p></div>
+	 <div><p><small>Mt. Fuji</small></p></div>
+	 <div><p><small>Pink Forest</small></p></div>
+	</div>
+
+	<!--<ul class="selectors">-->
+	<!--	<li class="focalPoint"><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li><li><a href="">•</a></li>-->
+	<!--</ul>-->
+
+	<button class="sldr-prv sldr-nav prev">Prev</button>
+	<button class="sldr-nxt sldr-nav next">Next</button>
 </div>
 
 <script src="../static/js/jquery-1.10.2.min.js"></script>

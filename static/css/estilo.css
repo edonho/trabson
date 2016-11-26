@@ -107,6 +107,11 @@ a{
 
 .footer{
     text-align:center;
+    
+}
+
+#container img{
+    max-width:64px;
 }
 
 

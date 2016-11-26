@@ -3,7 +3,7 @@
     <main class="inicio back-black-tp mains">
             <label class="form">
                     <form method="POST" action="/index.php/welcome/mensagen" class="mensagens"> 
-                    <h1><img <?= 'src="'.base_url("static/img/icons/msg.png").'"';?> alt="propaganda tatuagem" class="icons"></h1>
+                    <h1><img <?= 'src="'.base_url("static/img/icons/contato.png").'"';?> alt="propaganda tatuagem" class="icons"></h1>
                         <div class="formstyle">
                                  <label>
                                      <p>
