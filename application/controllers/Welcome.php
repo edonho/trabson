@@ -27,9 +27,13 @@ class Welcome extends CI_Controller {
 	public function perfil(){
 		$id = $this->session->userdata("id");
 		$this->load->view('Padrao/header');
-		$this->load->model('BancoModel','dados');//xablau
-		$r = $this->dados->perfil($id);
-		$this->load->view('perfil',$r);
+		if($id != ""){
+			$this->load->model('BancoModel','dados');//xablau
+			$r = $this->dados->perfil($id);
+			$this->load->view('perfil',$r);
+		}else{
+			$this->load->view('login');
+		}
 		$this->load->view('Padrao/footer');
 	}
 	public function login(){
@@ -77,6 +81,26 @@ class Welcome extends CI_Controller {
 					</script>";
  			}
   		}
+  		
+  		public function autenticarEstudio(){
+ 		$login= $this->input->post("login");
+ 		$senha= $this->input->post("senha");
+ 		$this->load->model('BancoModel','stud');
+ 		$resp = $this->stud->logar($login,$senha);
+ 		if($resp){
+ 			 echo "<script> 
+						alert('Login efetuado com sucesso!'); 
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/';
+					</script>";
+ 		}else {
+ 		     echo "<script> 
+						alert('Login ou senha invalida, Tente novamente!'); 
+						window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/welcome/login';
+					</script>";
+ 			}
+  		}
+  		
+  		
 		public function cadastrar(){
 	 		$data['nm_usuario']= $this->input->post("nome"). " " .$this->input->post("sobrenome");
 	 		$data['dt_nascimento']= $this->input->post("nascimento");
@@ -118,8 +142,8 @@ class Welcome extends CI_Controller {
 					</script>";
 	 		}
  		}
- 		public function feedback(){
- 			$data['id_usuario'] = $this->input->post("nome");
+ 		public function mensages(){
+ 			$data['nm_usuario'] = $this->input->post("nome");
 	 		$data['ds_email'] = $this->input->post("email");
 	 		$data['cd_telefone'] = $this->input->post("telefone");
 	 		$data['ds_mensagem'] = $this->input->post("mensagem");

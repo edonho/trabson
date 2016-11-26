@@ -1,11 +1,10 @@
 <meta charset="UTF-8">
-<link rel="stylesheet" <?php echo ' href="'.base_url("static/css/cadestudio.css").'"'; ?> >
 <div id="wrapper">
     <main class="inicio back-black-tp mains">
         <label class="form">
-            <label><input type="radio" name="escolheUsuario" id="formUsuario" class="css3button" checked>Usuário comum.</label>
+            <label><input type="radio" name="escolheUsuario" id="formUsuario" class="css3button" checked>Usuário comum</label>
             
-            <label><input type="radio" name="escolheUsuario" id="formEstudio" class="css3button">Estúdio.</label>
+            <label><input type="radio" name="escolheUsuario" id="formEstudio" class="css3button">Estúdio</label>
             
             <form method="POST" action="/index.php/welcome/cadastrar" class="formularioUsuario"> 
                     <h1>Cadastro de Usuário</h1>
@@ -64,7 +63,7 @@
            <!--FORMULARIO DO ESTUDIO-->
            
            <form method="POST" action="/index.php/welcome/cadestudio" class="formularioEstudio" style="display:none;"> 
-               <br> <h1>Cadastro de Estúdio</h1>                                                                                                                        <!-- XABLAU -->
+                <h1>Cadastro de Estúdio</h1>                                                                                                                        <!-- XABLAU -->
                 <p>
                     Nome do estúdio
                  <br>  <input type="text" name="nome" placeholder="ex. Baixada Tattoo" maxlength="50" autofocus required/> 
@@ -101,7 +100,7 @@
                      <p>
                          Imagem do Estúdio:
                          <input type="file" name="pic" accept="image/*">
-                          <input type="submit">
+                    
                      </p> 
                   </label>
                <input type="submit" name="search" value="Cadastrar" class="css3button">

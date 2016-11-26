@@ -28,6 +28,20 @@ class BancoModel extends CI_Model{
         }else{
             return false;
         }
+    }    
+    public function logarEstudio($login,$senha){
+        $this->db->select("u.*")->from("Estudio as u")->where("ds_login",$login)->where("ds_senha ",$senha);
+        $resp = $this->db->get()->result();
+        if(count($resp) == 1 ){
+            $r = (array)$resp[0];
+            $id = $r['id_estudio'];
+            $this->session->set_userdata("login",$login);
+            $this->session->set_userdata("id",$id);
+            return true;
+        }else{
+            return false;
+        }
+        
     }
     public function cadastrar($data){
         if ($this->db->insert('Usuario',$data)){

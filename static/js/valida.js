@@ -22,3 +22,15 @@ $(function(){
     });
 });
 
+$(function(){
+    $("#loginEstudio").click(function(){
+        $(".loginUsuario").stop().fadeOut(function(){
+            $(".formEstudio").stop().fadeIn();
+        });
+    });
+    $("#logUsuario").click(function(){
+        $(".loginEstudio").stop().fadeOut(function(){
+            $(".loginUsuario").stop().fadeIn();
+        });
+    });
+});

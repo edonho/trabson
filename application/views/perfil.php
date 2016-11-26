@@ -3,7 +3,7 @@
     <main class="inicio back-black-tp mains">
           <h1><img <?= 'src="'.base_url("static/img/icons/perfil.png").'"';?> alt="propaganda tatuagem" class="icons"></h1>
           <div class="dadosperfil">
-                  <p>
+                <p>
                         Login: <?php echo $ds_login ?>
                 </p>
                 <p>

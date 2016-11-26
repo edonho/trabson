@@ -59,7 +59,7 @@ form input{
 }
 
 .back-black-tp{
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);      /* site antigo*/
     color: #ecf0f1;
     left: 5%;
     right:5%;
@@ -104,11 +104,12 @@ form input{
     margin-left:20%;
     background-size: contain;
     background-repeat: no-repeat;
+    border-radius: 100px;
 }
 .projeto{
     top: 0px;
     display:inline-block;
-    background-color: #000;
+    background-color:rgba(0,0,0,0.7);
     font-size: 0.8em;
     height:276px;
     float: left;
@@ -133,6 +134,12 @@ form input{
 .mensagem{
     width:400px;
     height:100px;
+}
+.telefone{
+    background:url(/static/img/icons/tel.png);
+    background-position:left;
+    background-repeat: no-repeat;
+    background-size:contain;
 }
 .form{
     width: 100px;

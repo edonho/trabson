@@ -37,7 +37,6 @@
                      <p>
                          Imagem do Estúdio:
                          <input type="file" name="pic" accept="image/*">
-                          <input type="submit">
                      </p> 
                   </label>
            <input type="submit" name="search" value="Cadastrar" class="css3button">
