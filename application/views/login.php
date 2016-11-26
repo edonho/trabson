@@ -45,9 +45,9 @@
                   <img <?= 'src="'.base_url("static/img/icons/key.png").'"';?> class="name">
                   <input type="password" name="senha" placeholder="Senha" required>
             </p>
+             <input type="submit" name="search" value="Entrar" class="css3button">
             </label>
             </fieldset>
-             <input type="submit" name="search" value="Entrar" class="css3button">
             </div>  
         </form>
     </main>

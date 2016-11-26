@@ -41,7 +41,7 @@
                      </p> 
                   </label>
            <input type="submit" name="search" value="Cadastrar" class="css3button">
-             </div>
+             </di>
           </fieldset>
         </form>
     </label>
