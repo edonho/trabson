@@ -110,7 +110,7 @@ a{
     
 }
 
-#container img{
+.container img{
     max-width:64px;
 }
 

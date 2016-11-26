@@ -10,7 +10,6 @@ class Welcome extends CI_Controller {
 		$dados = array("data"=>$resp);
 		$this->load->view('inicio',$dados);
 		$this->load->view('Padrao/footer');
-		
 	}
 	/*
 	public function home(){
@@ -164,9 +163,10 @@ class Welcome extends CI_Controller {
  		public function pulverizar(){
  			$this->session->unset_userdata("id");
  			echo "<script> 
+ 					alert('Logout efetuado com sucesso!');
 					window.location.href = 'https://traaaabson-edinho-1.c9users.io/index.php/';
 				</script>";
- 		} 
+ 		}
  	}
  	// public function error(){
  	// 	$this->load->view("error");
