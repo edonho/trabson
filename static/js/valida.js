@@ -23,9 +23,9 @@ $(function(){
 });
 
 $(function(){
-    $("#loginEstudio").click(function(){
+    $("#logEstudio").click(function(){
         $(".loginUsuario").stop().fadeOut(function(){
-            $(".formEstudio").stop().fadeIn();
+            $(".loginEstudio").stop().fadeIn();
         });
     });
     $("#logUsuario").click(function(){

@@ -1,3 +1,4 @@
+
 <div id="wrapper">
     <aside class="propaganda1 back-gray">
         <img <?= 'src="'.base_url("static/img/bannertattoo.png").'"';?> alt="propaganda tatuagem">

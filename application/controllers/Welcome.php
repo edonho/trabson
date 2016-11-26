@@ -8,6 +8,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('Padrao/header');
 		$resp = $this->bdm->busca("e");
 		$dados = array("data"=>$resp);
+		$this->load->view('bootstrap-carousel');
 		$this->load->view('inicio',$dados);
 		$this->load->view('Padrao/footer');
 		
@@ -85,8 +86,8 @@ class Welcome extends CI_Controller {
   		public function autenticarEstudio(){
  		$login= $this->input->post("login");
  		$senha= $this->input->post("senha");
- 		$this->load->model('BancoModel','stud');
- 		$resp = $this->stud->logar($login,$senha);
+ 		$this->load->model('BancoModel','estud');
+ 		$resp = $this->estud->logarEstudio($login,$senha);
  		if($resp){
  			 echo "<script> 
 						alert('Login efetuado com sucesso!'); 
