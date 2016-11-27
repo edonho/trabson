@@ -72,5 +72,12 @@ class BancoModel extends CI_Model{
          $r = $this->db->get()->result_array();
          return $r[0];
      }
+       public function perfilEstudio($id){
+         $this->db->select("nm_usuario,ds_estudio,ds_email,ds_telefone,cd_cnpj");
+         $this->db->from("Estudio");
+         $this->db->where("id_usuario",$id);
+         $r = $this->db->get()->result_array();
+         return $r[0];
+     }
 }   
 ?>

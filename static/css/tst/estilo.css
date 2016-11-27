@@ -98,8 +98,8 @@ form input{
 }
 .img1{
     position: relative;
-    width: 50%;
-    height: 50%;
+    width: 150px;
+    height: 150px;
     margin: 0 auto;
     background-size: contain;
     background-repeat: no-repeat;
@@ -108,8 +108,9 @@ form input{
 
 .img2{
     position: relative;
-    width: 50%;
-    height: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 100px;
@@ -164,6 +165,13 @@ form input{
     margin:auto;
     border-radius: 25px;
     height:450px;
+}
+.cadastroestudio{
+    background-color:#000;
+    width:400px;
+    margin:auto;
+    border-radius: 25px;
+    height:600px;
 }
 .dadosperfil{
     background-color:#000;

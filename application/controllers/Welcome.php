@@ -33,6 +33,7 @@ class Welcome extends CI_Controller {
 		}else{
 			$this->load->view('login');
 		}
+
 		// $this->load->view('Padrao/footer');
 	}
 	public function login(){

@@ -3,8 +3,8 @@
     <main class="inicio back-black-tp mains">
         <label class="form">
             <label><input type="radio" name="escolheUsuario" id="formUsuario" class="css3button" checked>Usuário comum</label>
-            
             <label><input type="radio" name="escolheUsuario" id="formEstudio" class="css3button">Estúdio</label>
+          
             <form method="POST" action="/index.php/welcome/cadastrar" class="formularioUsuario"> 
                     <h1>Cadastro de Usuário</h1>
                     <div class="cadastro">
@@ -64,7 +64,8 @@
            <!--FORMULARIO DO ESTUDIO-->
            
            <form method="POST" action="/index.php/welcome/cadestudio" class="formularioEstudio" style="display:none;"> 
-                <h1>Cadastro de Estúdio</h1>                                                                                                                        <!-- XABLAU -->
+                <h1>Cadastro de Estúdio</h1>   
+                <div class="cadastroestudio">
                 <p>
                     Nome do estúdio
                  <br>  <input type="text" name="nome" placeholder="ex. Baixada Tattoo" maxlength="50" autofocus required/> 
@@ -91,13 +92,6 @@
                 <input type="password" name="senha" required/>
                    </p>
                </label>
-                 <label>
-                   <p>
-                    Endereço do Estúdio
-                 <br>  <input type="text" name="endereco" placeholder="Av. Ana Costa, 41-Gonzaga,Santos-SP" size="35 "maxlength="200" autofocus  required/> 
-                   </p>
-                  </label>
-               <label>
                   <label>
                    <p>
                     Telefone
@@ -110,26 +104,29 @@
                  <br>  <input type="tel" name="cnpj" placeholder="xx.xxx.xxx/xxxx-xx" maxlength="14" autofocus /> 
                    </p>
                   </label>
+                   <label>
+                   <p>
+                    Endereço do Estúdio
+                 <br>  <input type="text" name="endereco" placeholder="Av.Ana Costa,41-Gonzaga,Santos-SP" size="35 "maxlength="200"  autofocus  required/> 
+                   </p>
+                  </label>
+                   <label>
+                   <p>
+                    Descrição breve do Estúdio
+                 <br>  <input type="textarea" name="descricao" placeholder="Nosso estúdio é TOP" size="40"  maxlength="200"  autofocus  required /> 
+                   </p>
+                  </label>
                      <label>
                      <p>
                          Imagem do Estúdio:
-                         <input type="file" name="pic" accept="image/*"
+                    <br>    <input type="file" name="pic" accept="image/*">
                      </p> 
-                  </label>
-                  <label>
-                   <p>
-                    Descrição breve do Estúdio
-                 <br>  <input type="textarea" name="descricao" placeholder="Nosso estúdio é TOP" size="40"  maxlength="200" autofocus  required
-                
-                 /> 
-                 
-                   </p>
                   </label>
                <input type="submit" name="search" value="Cadastrar" class="css3button">
                <br>
+              </div>
         </form>
-    
-        </label>
+ 
         
         <br>
  </main>
