@@ -9,7 +9,7 @@ class Welcome extends CI_Controller {
 		$resp = $this->bdm->busca("e");
 		$dados = array("data"=>$resp);
 		$this->load->view('inicio',$dados);
-		$this->load->view('Padrao/footer');
+		// $this->load->view('Padrao/footer');
 	}
 	/*
 	public function home(){
@@ -21,7 +21,7 @@ class Welcome extends CI_Controller {
 	public function cadastro(){
 		$this->load->view('Padrao/header');
 		$this->load->view('cadastro');
-		$this->load->view('Padrao/footer');
+		// $this->load->view('Padrao/footer');
 	}
 	public function perfil(){
 		$id = $this->session->userdata("id");
@@ -33,7 +33,7 @@ class Welcome extends CI_Controller {
 		}else{
 			$this->load->view('login');
 		}
-		$this->load->view('Padrao/footer');
+		// $this->load->view('Padrao/footer');
 	}
 	public function login(){
 		$this->load->view('Padrao/header');
@@ -43,7 +43,7 @@ class Welcome extends CI_Controller {
 	public function mensagem(){
 		$this->load->view('Padrao/header');
 		$this->load->view('mensagem');
-		$this->load->view('Padrao/footer');
+		// $this->load->view('Padrao/footer');
 	}
 	public function busca(){
 		$nome = $this->input->get("buscarEstudio");
@@ -52,7 +52,7 @@ class Welcome extends CI_Controller {
 		$resp = $this->bdm->busca($nome);
 		$dados = array("data"=>$resp);
 		$this->load->view('resultadoBusca',$dados);
-		$this->load->view('Padrao/footer');
+		// $this->load->view('Padrao/footer');
 	}
 	public function estudios(){
  		$idEstudio = $this->input->get("idEstudio");
@@ -122,11 +122,14 @@ class Welcome extends CI_Controller {
 	 		}
  		}
  			public function cadestudio(){
-	 		$data['ds_estudio']= $this->input->post("nome");
+	 		$data['nm_estudio']= $this->input->post("nome");
 	 		$data['ds_email']= $this->input->post("email");
 	 		$data['ds_login']= $this->input->post("login");
 	 		$data['ds_senha']= $this->input->post("senha");
 	 		$data['cd_cnpj']= $this->input->post("cnpj");
+	 		$data['ds_telefone']= $this->input->post("telefone");
+	 		$data['ds_endereco']= $this->input->post("endereco");
+	 		$data['ds_estudio']= $this->input->post("descricao");
 	 		$this->load->model('BancoModel','cads');
 	 		$msg = $this->cads->cadestudio($data);
 	 		if($msg== "Estúdio cadastrado com sucesso!"){

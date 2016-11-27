@@ -3,7 +3,7 @@
     
 </html>
 <html lang="pt-br">
-    <head>
+    <head> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <title>NeedleTime</title>
@@ -14,11 +14,11 @@
         <!-- Js temporario -->
         <script <?= 'src="'.base_url("static/js/jquery.js").'"';?>></script>
         <script <?= 'src="'.base_url("static/js/valida.js").'"';?>></script>
-        
         <?php // require_once("links.html"); ?>
     </head>
     <body>
         <header class="back-black">
+            
             <a href="/" title="home"><img id="logo" <?= 'src="'.base_url("static/img/logo.png").'"';?>></a>
             <div class="align-center padding">
                 <form class="formLogin" id="formLogin" action="/index.php/welcome/busca" method="GET">
@@ -26,8 +26,9 @@
                     <input type="submit" name="search" value="buscar" class="css3button">
                 </form>
             </div>
-            
+
             <nav class="menuUsuario">
+                
                 <ul>
                     <li><a href="/" title="home">Home</a></li>
                     <li><a href="/index.php/welcome/cadastro" title="cadastre-se"> Cadastro </a></li>

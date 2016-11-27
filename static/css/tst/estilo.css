@@ -12,10 +12,10 @@ a{
     text-decoration:none;
 }
 body{
+    background-image: url("../../img/tatu1.jpg");
     margin: 0 auto;
     padding: 0;
     font-family: 'Century Gothic', sans-serif;
-    
 }
 
 body, header, .width-full, #content{
@@ -63,7 +63,6 @@ form input{
     color: #ecf0f1;
     left: 5%;
     right:5%;
-  
 }
 
 .mains{
@@ -101,7 +100,16 @@ form input{
     position: relative;
     width: 50%;
     height: 50%;
-    margin-left:20%;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 100px;
+}
+
+.img2{
+    position: relative;
+    width: 50%;
+    height: 50%;
     background-size: contain;
     background-repeat: no-repeat;
     border-radius: 100px;
@@ -170,14 +178,21 @@ form input{
     width:15px;
 }
 .tel1{
-    margin-right:50px;
+    display:inline-block;
     width:25px;
+}
+.tel2{
+    display:inline-block;
+     
 }
 .end{
     margin-right:10px;
     width:25px;
 }
-
+.maps > .tel1, .tel , .end, .end+p{
+    display:inline-block;
+    vertical-align:middle;
+}
 .form{
     width: 100px;
 }

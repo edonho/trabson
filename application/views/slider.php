@@ -3,7 +3,7 @@
 
 <body>
 
-<div class="stage" style="height:550px;">
+<div class="stage" style="height:470px;">
 	<div id="SLDR-ONE" class="sldr">
 		<ul class="wrp animate">
 			<li class="elmnt-one">
@@ -33,6 +33,15 @@
 					</div>
 				</div>
 			</li>
+			<li class="elmnt-five">
+				<div class="skew">
+					<div class="wrap">
+						<img src="../static/img/Pink-Forest3.png" width="1000" height="400px">
+					</div>
+				</div>
+			</li>
+			
+			
 		</ul>
 	</div>
 	<div class="captions">

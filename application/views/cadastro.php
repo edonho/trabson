@@ -74,7 +74,7 @@
                     <p>
                     Email 
                    <br>
-                <input type="email" name="email" placeholder="ex. joao@gmail.com" required/> 
+                <input type="email" name="email" placeholder="ex. estudio@gmail.com" required/> 
                     </p>
                </label>
                <label>
@@ -91,6 +91,19 @@
                 <input type="password" name="senha" required/>
                    </p>
                </label>
+                 <label>
+                   <p>
+                    Endereço do Estúdio
+                 <br>  <input type="text" name="endereco" placeholder="Av. Ana Costa, 41-Gonzaga,Santos-SP" size="35 "maxlength="200" autofocus  required/> 
+                   </p>
+                  </label>
+               <label>
+                  <label>
+                   <p>
+                    Telefone
+                 <br>  <input type="tel" name="telefone" placeholder="(13)3223-2544" maxlength="13" autofocus  required/> 
+                   </p>
+                  </label>
                <label>
                    <p>
                     Possui CNPJ?
@@ -100,14 +113,25 @@
                      <label>
                      <p>
                          Imagem do Estúdio:
-                         <input type="file" name="pic" accept="image/*">
-                    
+                         <input type="file" name="pic" accept="image/*"
                      </p> 
                   </label>
+                  <label>
+                   <p>
+                    Descrição breve do Estúdio
+                 <br>  <input type="textarea" name="descricao" placeholder="Nosso estúdio é TOP" size="40"  maxlength="200" autofocus  required
+                
+                 /> 
+                 
+                   </p>
+                  </label>
                <input type="submit" name="search" value="Cadastrar" class="css3button">
+               <br>
         </form>
+    
         </label>
         
+        <br>
  </main>
  </div>
 
