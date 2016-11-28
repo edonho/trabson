@@ -32,7 +32,15 @@
                 <ul>
                     <li><a href="/" title="home">Home</a></li>
                     <li><a href="/index.php/welcome/cadastro" title="cadastre-se"> Cadastro </a></li>
+                    <?php 
+                        $id = $this->session->userdata("id"); 
+                        if($id == ""){
+                    ?>
                     <li><a href="/index.php/welcome/login" title="entrar"> Login </a></li>
+                    <?php 
+                        }; 
+                    ?>
+                    
                     <li> <a href="/index.php/welcome/perfil" title="perfil"> Perfil </a></li>
                     <li> <a href="/index.php/welcome/mensagem" title="mensagem"> Contate-nos </a> </li>
                 </ul>    

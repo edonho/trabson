@@ -16,6 +16,7 @@ class BancoModel extends CI_Model{
         $r = $this->db->get();
         return $r;
     }
+    
     public function logar($login,$senha){
         $this->load->library('encrypt');
         $this->db->select("u.*")->from("Usuario as u")->where("ds_login",$login);
@@ -34,7 +35,8 @@ class BancoModel extends CI_Model{
         }else{
             return false;
         }
-    }    
+    }   
+    
     public function logarEstudio($login,$senha){
         $this->load->library('encrypt');
         $this->db->select("u.*")->from("Estudio as u")->where("ds_login",$login);

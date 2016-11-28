@@ -57,8 +57,13 @@ class Welcome extends CI_Controller {
 		// $this->load->view('Padrao/footer');
 	
 	public function login(){
+		$id = $this->session->userdata("id");
 		$this->load->view('Padrao/header');
-		$this->load->view('login');
+		if($id == ""){
+			$this->load->view('login');
+		}else{
+			echo "<script>window.location.href = 'https://traaaabson-edinho-1.c9users.io/';</script>";
+		}
 		$this->load->view('Padrao/footer');
 	}
 	public function mensagem(){
@@ -126,12 +131,10 @@ class Welcome extends CI_Controller {
 	 		$data['dt_nascimento']= $this->input->post("nascimento");
 	 		$data['ds_email']= $this->input->post("email");
 	 		$data['ds_login']= $this->input->post("login");
-	 		
 	 		$this->load->library('encrypt');
 	 		$senha = $this->input->post("senha");
 	 		$senha = $this->encrypt->encode($senha);
 	 		$data['ds_senha']= $senha;
-	 		
 	 		$data['sg_sexo'] = $this->input->post("sexo");
 	 		$this->load->model('BancoModel','cad');
 	 		$msg = $this->cad->cadastrar($data);
@@ -151,12 +154,10 @@ class Welcome extends CI_Controller {
 	 		$data['nm_estudio']= $this->input->post("nome");
 	 		$data['ds_email']= $this->input->post("email");
 	 		$data['ds_login']= $this->input->post("login");
-	 		
 	 		$this->load->library('encrypt');
 	 		$senha = $this->input->post("senha");
 	 		$senha = $this->encrypt->encode($senha);
 	 		$data['ds_senha']= $senha;
-	 		
 	 		$data['cd_cnpj']= $this->input->post("cnpj");
 	 		$data['ds_telefone']= $this->input->post("telefone");
 	 		$data['ds_endereco']= $this->input->post("endereco");
