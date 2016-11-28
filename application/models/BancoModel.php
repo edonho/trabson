@@ -41,7 +41,6 @@ class BancoModel extends CI_Model{
         }else{
             return false;
         }
-        
     }
     public function cadastrar($data){
         if ($this->db->insert('Usuario',$data)){
@@ -62,7 +61,7 @@ class BancoModel extends CI_Model{
          if ($this->db->insert('Mensagem',$data)){
              return "mensagem enviada com sucesso, obrigado!";
          }else{
-             return "Falha na mensagem, tente novamente";
+             return "Falha no envio, tente novamente";
          }
      }
      public function perfil($id){
@@ -72,12 +71,12 @@ class BancoModel extends CI_Model{
          $r = $this->db->get()->result_array();
          return $r[0];
      }
-       public function perfilEstudio($id){
-         $this->db->select("nm_usuario,ds_estudio,ds_email,ds_telefone,cd_cnpj");
-         $this->db->from("Estudio");
-         $this->db->where("id_usuario",$id);
-         $r = $this->db->get()->result_array();
-         return $r[0];
-     }
-}   
+    //  public function logado($id){
+    //      $this->db->select("id_estudio,ds_login,nm_estudio,ds_email,cd_telefone,cd_cnpj");
+    //      $this->db->from("Estudio");
+    //      $this->db->where("id_estudio",$id);
+    //      $r = $this->db->get()->result_array();
+    //      return $r[0];
+    //  }
+}
 ?>

@@ -33,9 +33,21 @@ class Welcome extends CI_Controller {
 		}else{
 			$this->load->view('login');
 		}
+	}	
+	// public function logado(){
+	// 	$id = $this->session->userdata("id");
+	// 	$this->load->view('Padrao/header');
+	// 	if($id != ""){
+	// 		$this->load->model('BancoModel','dados');//xablau
+	// 		$r = $this->dados->perfil($id);
+	// 		$this->load->view('perfil',$r);
+	// 	}else{
+	// 		$this->load->view('login');
+	// 	}
+	// }
 
 		// $this->load->view('Padrao/footer');
-	}
+	
 	public function login(){
 		$this->load->view('Padrao/header');
 		$this->load->view('login');

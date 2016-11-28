@@ -25,6 +25,24 @@
                 </p>
                   <a href="/index.php/welcome/pulverizar" name="Logout" class="css3button">Logout </a>
           </div>
+          <!--<div class="dadosestudio">-->
+          <!--      <p>-->
+          <!--           <?php echo $ds_login ?>-->
+          <!--      </p>-->
+          <!--      <p>-->
+          <!--              Nome: <?php echo $nm_estudio ?>-->
+          <!--      </p>-->
+          <!--      <p>-->
+          <!--              Descrição: <?php echo $ds_estudio ?>-->
+          <!--      </p>-->
+          <!--      <p>-->
+          <!--              Email: <?php echo $ds_email ?>        -->
+          <!--      </p>-->
+          <!--      <p>-->
+          <!--             Telefone: <?php echo $cd_telefone ?>                 -->
+          <!--      </p>-->
+          <!--        <a href="/index.php/welcome/pulverizar" name="Logout" class="css3button">Logout </a>-->
+          <!--</div>  -->
      </main>
 </div>
 
