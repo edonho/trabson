@@ -17,8 +17,13 @@ class BancoModel extends CI_Model{
         return $r;
     }
     public function logar($login,$senha){
-        $this->db->select("u.*")->from("Usuario as u")->where("ds_login",$login)->where("ds_senha ",$senha);
+        $this->load->library('encrypt');
+        $this->db->select("u.*")->from("Usuario as u")->where("ds_login",$login);
         $resp = $this->db->get()->result();
+        $tratar = (array)$resp[0];
+        $tratar = $tratar['ds_senha'];
+        $senha = $this->encrypt->decode($tratar);
+        $this->db->select("u.*")->from("Usuario as u")->where("ds_login",$login)->where("ds_senha ",$senha);
         if(count($resp) == 1 ){
             $r = (array)$resp[0];
             $id = $r['id_usuario'];

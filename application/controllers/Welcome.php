@@ -126,7 +126,12 @@ class Welcome extends CI_Controller {
 	 		$data['dt_nascimento']= $this->input->post("nascimento");
 	 		$data['ds_email']= $this->input->post("email");
 	 		$data['ds_login']= $this->input->post("login");
-	 		$data['ds_senha']= $this->input->post("senha");
+	 		
+	 		$this->load->library('encrypt');
+	 		$senha = $this->input->post("senha");
+	 		$senha = $this->encrypt->encode($senha);
+	 		$data['ds_senha']= $senha;
+	 		
 	 		$data['sg_sexo'] = $this->input->post("sexo");
 	 		$this->load->model('BancoModel','cad');
 	 		$msg = $this->cad->cadastrar($data);
