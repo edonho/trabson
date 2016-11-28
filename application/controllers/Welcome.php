@@ -151,7 +151,12 @@ class Welcome extends CI_Controller {
 	 		$data['nm_estudio']= $this->input->post("nome");
 	 		$data['ds_email']= $this->input->post("email");
 	 		$data['ds_login']= $this->input->post("login");
-	 		$data['ds_senha']= $this->input->post("senha");
+	 		
+	 		$this->load->library('encrypt');
+	 		$senha = $this->input->post("senha");
+	 		$senha = $this->encrypt->encode($senha);
+	 		$data['ds_senha']= $senha;
+	 		
 	 		$data['cd_cnpj']= $this->input->post("cnpj");
 	 		$data['ds_telefone']= $this->input->post("telefone");
 	 		$data['ds_endereco']= $this->input->post("endereco");

@@ -36,8 +36,12 @@ class BancoModel extends CI_Model{
         }
     }    
     public function logarEstudio($login,$senha){
-        $this->db->select("u.*")->from("Estudio as u")->where("ds_login",$login)->where("ds_senha ",$senha);
+        $this->load->library('encrypt');
+        $this->db->select("u.*")->from("Estudio as u")->where("ds_login",$login);
         $resp = $this->db->get()->result();
+        $tratar = (array)$resp[0];
+        $tratar = $tratar['ds_senha'];
+        $this->db->select("u.*")->from("Estudio as u")->where("ds_login",$login)->where("ds_senha ",$senha);
         if(count($resp) == 1 ){
             $r = (array)$resp[0];
             $id = $r['id_estudio'];
