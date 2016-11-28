@@ -2,6 +2,7 @@
 <div id="wrapper">
     <main class="inicio back-black-tp mains">
           <h1><img <?= 'src="'.base_url("static/img/icons/perfil.png").'"';?> alt="propaganda tatuagem" class="icons"></h1>
+          <?php if($this->session->userdata('TipoUsuario')== 'usuario'){          ?>
           <div class="dadosperfil">
                 <p>
                      <?php echo $ds_login ?>
@@ -25,24 +26,29 @@
                 </p>
                   <a href="/index.php/welcome/pulverizar" name="Logout" class="css3button">Logout </a>
           </div>
-          <!--<div class="dadosestudio">-->
-          <!--      <p>-->
-          <!--           <?php echo $ds_login ?>-->
-          <!--      </p>-->
-          <!--      <p>-->
-          <!--              Nome: <?php echo $nm_estudio ?>-->
-          <!--      </p>-->
-          <!--      <p>-->
-          <!--              Descrição: <?php echo $ds_estudio ?>-->
-          <!--      </p>-->
-          <!--      <p>-->
-          <!--              Email: <?php echo $ds_email ?>        -->
-          <!--      </p>-->
-          <!--      <p>-->
-          <!--             Telefone: <?php echo $cd_telefone ?>                 -->
-          <!--      </p>-->
-          <!--        <a href="/index.php/welcome/pulverizar" name="Logout" class="css3button">Logout </a>-->
-          <!--</div>  -->
+          <?php }else{      ?>
+          <div class="dadosestudio">
+                <p>
+                     <?php echo $ds_login ?>
+                </p>
+                <p>
+                        Nome: <?php echo $nm_estudio ?>
+                </p>
+                <p>
+                        CNPJ: <?php echo $cd_cnpj ?>
+                </p>
+                <p>
+                        Descrição: <?php echo $ds_estudio ?>
+                </p>
+                <p>
+                        Email: <?php echo $ds_email ?>        
+                </p>
+                <p>
+                       Telefone: <?php echo $ds_telefone ?>                 
+                </p>
+                  <a href="/index.php/welcome/pulverizar" name="Logout" class="css3button">Logout </a>
+          </div> 
+          <?php }   ?>
      </main>
 </div>
 

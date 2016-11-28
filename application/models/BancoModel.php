@@ -22,6 +22,7 @@ class BancoModel extends CI_Model{
         if(count($resp) == 1 ){
             $r = (array)$resp[0];
             $id = $r['id_usuario'];
+            $this->session->set_userdata("TipoUsuario",'usuario');
             $this->session->set_userdata("login",$login);
             $this->session->set_userdata("id",$id);
             return true;
@@ -35,6 +36,7 @@ class BancoModel extends CI_Model{
         if(count($resp) == 1 ){
             $r = (array)$resp[0];
             $id = $r['id_estudio'];
+            $this->session->set_userdata("TipoUsuario",'estudio');  
             $this->session->set_userdata("login",$login);
             $this->session->set_userdata("id",$id);
             return true;
@@ -71,12 +73,12 @@ class BancoModel extends CI_Model{
          $r = $this->db->get()->result_array();
          return $r[0];
      }
-    //  public function logado($id){
-    //      $this->db->select("id_estudio,ds_login,nm_estudio,ds_email,cd_telefone,cd_cnpj");
-    //      $this->db->from("Estudio");
-    //      $this->db->where("id_estudio",$id);
-    //      $r = $this->db->get()->result_array();
-    //      return $r[0];
-    //  }
+     public function perfilestudio($id){
+         $this->db->select("ds_login,nm_estudio,ds_email,ds_telefone,cd_cnpj,ds_estudio");
+         $this->db->from("Estudio");
+         $this->db->where("id_estudio",$id);
+         $r = $this->db->get()->result_array();
+         return $r[0];
+     }
 }
 ?>
